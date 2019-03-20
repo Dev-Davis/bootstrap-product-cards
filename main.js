@@ -72,18 +72,26 @@ domPrinter = (divId, textToPrint) => {
 }
 
 const domStringBuilder = () => {
-    let domString = '';
-    domString += `<div class="container">`;
-    domString += `<div class="row">`;
-    products.forEach((item) => {
-        domString += `<div class="col-4 card">`;
-        domString +=    `<h2>${item.title}</h2>`;
-        domString += `</div>`;
-    });
-    domString += `</div>`;
-    domString += `</div>`;
-    domPrinter('parts', domString);
-}
+  let domString = '';
+    domString += '<div class="container">';
+    domString +=    '<div class="row">';
+  products.forEach((product) => {
+    domString +=    '<div class="col-4 product">';
+    domString +=    `<div class="card">`;
+    domString +=    `  <div class="card-header">${product.title}</div>`;
+    domString +=    `  <img src=${product.imageUrl} class="card-img-top" alt="...">`;
+    domString +=    `  <div class="card-body">`;
+    domString +=    `    <p class="card-text">${product.description}</p>`;
+    domString +=        `   <h6>Size: ${product.size}</h6>`
+    domString +=    `  </div>`;
+    domString +=    `</div>`;
+    domString +=    '</div>';
+  })
+    domString +=    '</div>';
+    domString += '</div>';
+  domPrinter('product-container', domString);
+
+};
 
 
 init = () => {
