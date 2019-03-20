@@ -73,9 +73,15 @@ domPrinter = (divId, textToPrint) => {
 
 const domStringBuilder = () => {
     let domString = '';
+    domString += `<div class="container">`;
+    domString += `<div class="row">`;
     products.forEach((item) => {
-        domString += `<h2>${item.title}</h2>`
+        domString += `<div class="col-4 card">`;
+        domString +=    `<h2>${item.title}</h2>`;
+        domString += `</div>`;
     });
+    domString += `</div>`;
+    domString += `</div>`;
     domPrinter('parts', domString);
 }
 
