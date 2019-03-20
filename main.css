@@ -1,7 +1,8 @@
 body {
     background-color: silver;
 }
-
-.card {
-    border: 1px solid black;
-}
+ #title-note {
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    font-size: 44px;
+ }
